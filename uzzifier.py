@@ -1,6 +1,7 @@
 
 
-vowels = ["a","e","i","o","u","A","E","I","O","U"]
+vowels = ["a","e","i","o","u","A","E","I","O","U", "y", "Y"]
+consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'z', "B","C","D","F","G","H","J","K","L","M","N","P","Q","R","S","T","V","W","X","Z"]
 
 origword = input("enter a word: ")
 
@@ -57,7 +58,9 @@ finalword = ''.join(wordrev)
 if finalword[-2:] == "ns":
     print(finalword[:-2])
 
-elif finalword[-1:] == "s" or finalword[-1:] == "n":
+
+
+elif finalword[-1:] in consonants:
     print(finalword[:-1])
 
 else:
